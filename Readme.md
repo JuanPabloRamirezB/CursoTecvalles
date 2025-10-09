@@ -26,7 +26,6 @@ Estos montajes permiten que los datos sobrevivan a la eliminación de un contene
 |docker volume ls|Lista todos los volúmenes de Docker en el sistema.|
 |---|---|
 |docker volume inspect NOMBRE|Muestra información detallada sobre un volumen específico (ruta, driver, etiquetas, etc.).|
-|---|---|
 |docker volume rm NOMBRE|Elimina un volumen específico.|
 
 
@@ -96,6 +95,7 @@ El driver de red **none** en Docker es el controlador de red más simple y estri
 * El contenedor está completamente aislado de la red del host, de internet y de cualquier otro contenedor. Es como si estuviera encerrado sin ningún cable de red conectado.
 * Al no tener interfaz de red, no se le asigna una dirección IP.
 * Solo puede comunicarse consigo mismo a través de la interfaz de loopback 
+
 
 
 
