@@ -66,13 +66,9 @@ La creación de redes Docker es crucial porque define cómo los contenedores se 
 ### Comandos basicos
 
 |Comando|Descripcion|
-|---|---|
-docker network create -d bridge NOMBRE|Crea una nueva red definida por el usuario.|
-|---|---|
-docker network ls|Lista todas las redes de Docker en el sistema.|
-|---|---|
-docker network inspect NOMBRE|Muestra información detallada sobre una red, incluyendo qué contenedores están conectados y sus IPs.|
-|---|---|
+|docker network create -d bridge NOMBRE|Crea una nueva red definida por el usuario.|
+|docker network ls|Lista todas las redes de Docker en el sistema.|
+|docker network inspect NOMBRE|Muestra información detallada sobre una red, incluyendo qué contenedores están conectados y sus IPs.|
 |docker network rm NOMBRE|Elimina una red de Docker.|
 
 ### Bridge
@@ -95,6 +91,7 @@ El driver de red **none** en Docker es el controlador de red más simple y estri
 * El contenedor está completamente aislado de la red del host, de internet y de cualquier otro contenedor. Es como si estuviera encerrado sin ningún cable de red conectado.
 * Al no tener interfaz de red, no se le asigna una dirección IP.
 * Solo puede comunicarse consigo mismo a través de la interfaz de loopback 
+
 
 
 
