@@ -21,13 +21,13 @@ Estos montajes permiten que los datos sobrevivan a la eliminación de un contene
 
 |Comando|Descripcion|
 |---|---|
-|docker volume create $<NOMBRE>$|Crea un nuevo volumen de Docker con el nombre especificado.|
+|docker volume create NOMBRE|Crea un nuevo volumen de Docker con el nombre especificado.|
 |---|---|
 |docker volume ls|Lista todos los volúmenes de Docker en el sistema.|
 |---|---|
-|docker volume inspect $<NOMBRE>$|Muestra información detallada sobre un volumen específico (ruta, driver, etiquetas, etc.).|
+|docker volume inspect NOMBRE|Muestra información detallada sobre un volumen específico (ruta, driver, etiquetas, etc.).|
 |---|---|
-|docker volume rm $<NOMBRE>$|Elimina un volumen específico.|
+|docker volume rm NOMBRE|Elimina un volumen específico.|
 
 
 ### 1. Volume (Volumen)
@@ -68,13 +68,13 @@ La creación de redes Docker es crucial porque define cómo los contenedores se 
 
 |Comando|Descripcion|
 |---|---|
-docker network create -d bridge $<NOMBRE>$|Crea una nueva red definida por el usuario.|
+docker network create -d bridge NOMBRE|Crea una nueva red definida por el usuario.|
 |---|---|
 docker network ls|Lista todas las redes de Docker en el sistema.|
 |---|---|
-docker network inspect $<NOMBRE>$|Muestra información detallada sobre una red, incluyendo qué contenedores están conectados y sus IPs.|
+docker network inspect NOMBRE|Muestra información detallada sobre una red, incluyendo qué contenedores están conectados y sus IPs.|
 |---|---|
-|docker network rm $<NOMBRE>$|Elimina una red de Docker.|
+|docker network rm NOMBRE|Elimina una red de Docker.|
 
 ### Bridge
 El driver **bridge (puente)** es el driver de red predeterminado y más común que usa Docker. Esencialmente, crea una red virtual privada dentro del host (la máquina donde se ejecuta Docker) a la que se conectan todos los contenedores que no especifican otra red. Cuando Docker se instala, crea una interfaz de red virtual en el host, generalmente llamada docker0 (de ahí el nombre "puente"). Esta actúa como un conmutador (switch).
@@ -96,6 +96,7 @@ El driver de red **none** en Docker es el controlador de red más simple y estri
 * El contenedor está completamente aislado de la red del host, de internet y de cualquier otro contenedor. Es como si estuviera encerrado sin ningún cable de red conectado.
 * Al no tener interfaz de red, no se le asigna una dirección IP.
 * Solo puede comunicarse consigo mismo a través de la interfaz de loopback 
+
 
 
 
