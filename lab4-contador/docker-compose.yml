@@ -1,0 +1,23 @@
+services:
+  contador:
+    build: .
+    container_name: contador_app
+    ports:
+      - "5000:5000"
+    environment:
+      REDIS_HOST: redis
+    depends_on:
+      - redis
+    restart: unless-stopped
+ 
+  redis:
+    image: redis:7-alpine
+    container_name: contador_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+ 
+volumes:
+  redis-data:
+
